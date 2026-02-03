@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Character Counter</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<svg
+							width="33"
+							height="40"
+							viewBox="0 0 33 40"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M18.3562 5.82192V0H0V40H18.3562V34.1781C14.5959 34.1781 10.9896 32.6842 8.33074 30.0253C5.67183 27.3664 4.17808 23.7603 4.17808 20C4.17808 16.2397 5.67183 12.6334 8.33074 9.97459C10.9896 7.31568 14.5959 5.82192 18.3562 5.82192Z"
+								fill="#D3A0FA"
+							/>
+							<path
+								d="M18.3568 5.8219V34.1781C22.1171 34.1781 25.7234 32.6842 28.3823 30.0253C31.0412 27.3664 32.5349 23.7603 32.5349 20C32.5349 16.2397 31.0412 12.6334 28.3823 9.97457C25.7234 7.31567 22.1171 5.8219 18.3568 5.8219Z"
+								fill="#D3A0FA"
+							/>
+						</svg>
+						<h3>Character Counter</h3>
+					</li>
+					<li>
+						<button>
+							<svg
+								width="22"
+								height="22"
+								viewBox="0 0 22 22"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_216_412)">
+									<path
+										d="M10.9999 1.83325V3.66659M10.9999 18.3333V20.1666M3.66659 10.9999H1.83325M5.78786 5.78786L4.4915 4.4915M16.212 5.78786L17.5083 4.4915M5.78786 16.2158L4.4915 17.5121M16.212 16.2158L17.5083 17.5121M20.1666 10.9999H18.3333M15.5833 10.9999C15.5833 13.5312 13.5312 15.5833 10.9999 15.5833C8.46861 15.5833 6.41659 13.5312 6.41659 10.9999C6.41659 8.46861 8.46861 6.41659 10.9999 6.41659C13.5312 6.41659 15.5833 8.46861 15.5833 10.9999Z"
+										stroke="white"
+										stroke-width="1.98"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_216_412">
+										<rect width="22" height="22" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="hero">
+				<h1 class="text-center">Analyze your text in real-time.</h1>
+				<form id="form">
+					<textarea
+						id="text"
+						name="text"
+						placeholder="Start typing here...(or paste your text)"
+						required
+					></textarea>
+					<div class="form-actions">
+						<div class="form-actions-inner">
+							<label>
+								Exclude Spaces
+								<input
+									id="exclude-spaces"
+									name="exclude-spaces"
+									type="checkbox"
+								/>
+							</label>
+							<label>
+								Set Character Limit
+								<input
+									id="character-limit"
+									name="character-limit"
+									type="checkbox"
+								/>
+							</label>
+						</div>
+						<p>Approx.reading time: 0 minute</p>
+					</div>
+				</form>
+			</section>
+			<section class="summary">
+				<div class="card card-characters purple-400">
+					<h2 class="neutral-900-text" id="total-characters">0</h2>
+					<h4 class="neutral-900-text">Total Characters</h4>
+					<div class="card-overflow">
+						<svg
+							width="120"
+							height="150"
+							viewBox="0 0 120 150"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<g clip-path="url(#clip0_242_474)">
+								<mask
+									id="mask0_242_474"
+									style="mask-type: luminance"
+									maskUnits="userSpaceOnUse"
+									x="0"
+									y="0"
+									width="150"
+									height="150"
+								>
+									<path
+										d="M150 150L150 0L6.55671e-06 -6.55671e-06L0 150L150 150Z"
+										fill="white"
+									/>
+								</mask>
+								<g mask="url(#mask0_242_474)">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M113.25 -1.60639e-06L113.25 20.625L113.25 21L113.254 21C113.454 29.7324 120.595 36.75 129.375 36.75L150 36.75L150 41.25L129 41.25C120.302 41.25 113.25 48.3015 113.25 57C113.25 65.6985 120.302 72.75 129 72.75L150 72.75L150 77.25L129 77.25C120.302 77.25 113.25 84.3015 113.25 93C113.25 101.698 120.302 108.75 129 108.75L150 108.75L150 114L129 114C120.302 114 113.25 121.051 113.25 129.75L113.25 150L108.75 150L108.75 129C108.75 120.301 101.699 113.25 93 113.25C84.3015 113.25 77.25 120.301 77.25 129L77.25 150L72.75 150L72.75 129C72.75 120.301 65.6985 113.25 57 113.25C48.3015 113.25 41.25 120.301 41.25 129L41.25 150L36.75 150L36.75 129.75C36.75 121.051 29.6985 114 21 114L20.25 114L1.57361e-06 114L1.80309e-06 108.75L21 108.75C29.6985 108.75 36.75 101.698 36.75 93C36.75 84.3015 29.6985 77.25 21 77.25L3.18e-06 77.25L3.3767e-06 72.75L21 72.75C29.6985 72.75 36.75 65.6985 36.75 57C36.75 48.3015 29.6985 41.25 21 41.25L4.75361e-06 41.25L4.95031e-06 36.75L20.625 36.75C29.4053 36.75 36.5468 29.7324 36.7455 21L36.75 21L36.75 20.625L36.75 -4.95031e-06L41.25 -4.75361e-06L41.25 21C41.25 29.6985 48.3015 36.75 57 36.75C65.6985 36.75 72.75 29.6985 72.75 21L72.75 -3.3767e-06L77.25 -3.18e-06L77.25 21C77.25 29.6985 84.3015 36.75 93 36.75C101.699 36.75 108.75 29.6985 108.75 21L108.75 -1.80309e-06L113.25 -1.60639e-06ZM77.25 57C77.25 65.6985 84.3015 72.75 93 72.75C101.699 72.75 108.75 65.6985 108.75 57C108.75 48.3015 101.699 41.25 93 41.25C84.3015 41.25 77.25 48.3015 77.25 57ZM77.25 93C77.25 101.698 84.3015 108.75 93 108.75C101.699 108.75 108.75 101.698 108.75 93C108.75 84.3015 101.699 77.25 93 77.25C84.3015 77.25 77.25 84.3015 77.25 93ZM57 72.75C48.3015 72.75 41.25 65.6985 41.25 57C41.25 48.3015 48.3015 41.25 57 41.25C65.6985 41.25 72.75 48.3015 72.75 57C72.75 65.6985 65.6985 72.75 57 72.75ZM41.25 93C41.25 101.698 48.3015 108.75 57 108.75C65.6985 108.75 72.75 101.698 72.75 93C72.75 84.3015 65.6985 77.25 57 77.25C48.3015 77.25 41.25 84.3015 41.25 93Z"
+										fill="#DEBAFC"
+									/>
+								</g>
+							</g>
+							<defs>
+								<clipPath id="clip0_242_474">
+									<rect
+										width="150"
+										height="150"
+										fill="white"
+										transform="translate(150) rotate(90)"
+									/>
+								</clipPath>
+							</defs>
+						</svg>
+					</div>
+				</div>
+				<div class="card card-word yellow-500">
+					<h2 class="neutral-900-text" id="word-counts">0</h2>
+					<h4 class="neutral-900-text">Word counts</h4>
+					<div class="card-overflow">
+						<svg
+							width="120"
+							height="150"
+							viewBox="0 0 120 150"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<mask
+								id="mask0_216_445"
+								style="mask-type: luminance"
+								maskUnits="userSpaceOnUse"
+								x="0"
+								y="0"
+								width="150"
+								height="150"
+							>
+								<path d="M150 0H0V150H150V0Z" fill="white" />
+							</mask>
+							<g mask="url(#mask0_216_445)">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M0 0H50V50H0V0ZM99.9997 50H50V99.9997H0V150H50V99.9997H99.9997V150H150V99.9997H99.9997V50ZM99.9997 50H150V0H99.9997V50Z"
+									fill="#FFB844"
+								/>
+							</g>
+						</svg>
+					</div>
+				</div>
+				<div class="card card-sentence orange-500">
+					<h2 class="neutral-900-text" id="sentences-count">0</h2>
+					<h4 class="neutral-900-text">Sentences Count</h4>
+					<div class="card-overflow">
+						<svg
+							width="120"
+							height="150"
+							viewBox="0 0 120 150"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<mask
+								id="mask0_216_454"
+								style="mask-type: luminance"
+								maskUnits="userSpaceOnUse"
+								x="0"
+								y="0"
+								width="150"
+								height="150"
+							>
+								<path d="M0 0L0 150H150V0H0Z" fill="white" />
+							</mask>
+							<g mask="url(#mask0_216_454)">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M32.4418 130.99L32.4417 150H42.5583V130.99C42.5583 123.572 48.572 117.558 55.9901 117.558H56.0267H75H93.972H94.0103C101.428 117.558 107.442 123.572 107.442 130.99V150H117.558V130.99C117.558 123.572 123.572 117.558 130.991 117.558H131.026H150V107.442H131.026H130.991C123.572 107.442 117.558 101.429 117.558 94.0103V75V55.9901C117.558 48.5718 123.572 42.5582 130.991 42.5582L131.026 42.5582H150V32.4418H131.026H130.991C123.572 32.4418 117.558 26.4281 117.558 19.01V0L107.442 4.42207e-07V19.01C107.442 26.4281 101.428 32.4419 94.0103 32.4419L93.9735 32.4418H75H56.0266L55.9901 32.4419C48.572 32.4419 42.5583 26.4282 42.5583 19.01V3.27835e-06L32.4417 3.72056e-06V19.01C32.4418 26.4282 26.4281 32.4419 19.0099 32.4419L18.9734 32.4418H0L5.62875e-08 42.5582H18.9723L19.0099 42.5582C26.4281 42.5582 32.4418 48.5718 32.4418 55.9901L32.4417 75V94.0103C32.4418 101.429 26.4281 107.442 19.0099 107.442H18.9734H0L5.62875e-08 117.558H18.9723H19.0099C26.4281 117.558 32.4418 123.572 32.4418 130.99ZM107.442 75V55.9901C107.442 48.5718 101.428 42.5582 94.0103 42.5582L93.972 42.5582H75H56.0267L55.9901 42.5582C48.572 42.5582 42.5583 48.5718 42.5583 55.9901V75V94.0103C42.5583 101.429 48.572 107.442 55.9901 107.442H56.0266H75H93.9735H94.0103C101.428 107.442 107.442 101.429 107.442 94.0103V75Z"
+									fill="#FA9A82"
+								/>
+							</g>
+						</svg>
+					</div>
+				</div>
+				<div class="letters-list">
+					<p>No characters found. Start typing to see letter density.</p>
+					<!--
+					<div class="letter-card">
+						<p>E</p>
+						<progress value="0" max="100"></progress>
+						<p>40 (16.00%)</p>
+					</div>
+					<details>
+						<summary>Show more</summary>
+					</details>
+					-->
+				</div>
+			</section>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
